@@ -2,9 +2,10 @@
   "name": "lab4",
   "version": "1.0.0",
   "description": "Init readme",
-  "main": "index.js",
+  "type": "module",
+  "main": "index.mjs",
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.mjs",
     "test": "jest"
   },
   "keywords": [],

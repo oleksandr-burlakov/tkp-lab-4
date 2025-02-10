@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: '16' 
       - run: npm install 
-      - run: npm test 
+      - run: NODE_OPTIONS="--experimental-vm-modules" npm test 
       
       - name: Build Docker image
         run: docker build -t my-app .
