@@ -1,5 +1,5 @@
 import { collectDefaultMetrics, register } from 'prom-client';
-import * as fetch from 'node-fetch';
+import fetch from 'node-fetch';
 
 // Збираємо стандартні метрики Node.js
 collectDefaultMetrics({ prefix: 'my_app_' });
