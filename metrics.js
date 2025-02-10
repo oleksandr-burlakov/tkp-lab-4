@@ -1,4 +1,5 @@
 const { collectDefaultMetrics, register } = require('prom-client');
+const fetch = require('node-fetch');
 
 // Збираємо стандартні метрики Node.js
 collectDefaultMetrics({ prefix: 'my_app_' });

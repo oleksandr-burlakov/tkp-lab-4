@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
 server = app.listen(port, () => {
 
-    logger.info(`Server is running on port: ${port}`);
+    console.log(`Server is running on port: ${port}`);
 });
 
 module.exports = { app, server };
