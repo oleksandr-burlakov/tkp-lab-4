@@ -23,10 +23,7 @@ jobs:
       - name: Run Docker container
         run: docker run my-app
 
-      - name: Build Docker image
-        run: docker build -t my-app .
-
-      - name: Deploy to Docker Swarm
-        run: |
-          docker swarm init 
-          docker-compose -f docker-compose.yml up -d
+      - name: Send metrics to Grafana Cloud
+        run: node metrics.js
+        env:
+          GRAFANA_SA_TOKEN: ${{ secrets.GRAFANA_SA_TOKEN }}
