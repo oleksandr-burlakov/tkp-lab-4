@@ -1,5 +1,4 @@
 const express = require('express');
-const logger = require('./logger');
 const { sendMetricsToGrafanaCloud } = require('./metrics');
 
 const app = express();
