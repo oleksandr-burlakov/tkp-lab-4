@@ -16,3 +16,9 @@ jobs:
           node-version: '16' 
       - run: npm install 
       - run: npm test 
+      
+      - name: Build Docker image
+        run: docker build -t my-app .
+
+      - name: Run Docker container
+        run: docker run my-app
