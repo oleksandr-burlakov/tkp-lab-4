@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  web:
+    image: my-app
+    ports:
+      - "3000:3000"
+    deploy:
+      replicas: 3
+      resources:
+        limits:
+          cpu: "1"
+          memory: "512M"
+      restart_policy:
+        condition: on-failure

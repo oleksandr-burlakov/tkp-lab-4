@@ -22,3 +22,11 @@ jobs:
 
       - name: Run Docker container
         run: docker run my-app
+
+      - name: Build Docker image
+        run: docker build -t my-app .
+
+      - name: Deploy to Docker Swarm
+        run: |
+          docker swarm init 
+          docker stack deploy -c docker-compose.yml my-app
