@@ -24,6 +24,6 @@ jobs:
         run: docker run my-app
 
       - name: Send metrics to Grafana Cloud
-        run: node metrics.js
+        run: node metrics.mjs
         env:
           GRAFANA_SA_TOKEN: ${{ secrets.GRAFANA_SA_TOKEN }}
