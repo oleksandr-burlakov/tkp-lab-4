@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 });
 
 const server = app.listen(port, () => {
-
+    console.log("New log");
     console.log(`Server is running on port: ${port}`);
 });
 
