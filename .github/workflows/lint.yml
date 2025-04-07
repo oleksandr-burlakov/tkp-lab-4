@@ -28,3 +28,9 @@ jobs: # list of things to do
 
       - name: Code Linting
         run: npm run lint
+  testing:
+    name: Testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Code
+        run: npm test
